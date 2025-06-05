@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Excel/CSV sementara
+*.xlsx
+*.csv
+
+# Virtual environment
+env/
+venv/
+.venv/
+
+# Streamlit secrets (jika ada)
+.streamlit/secrets.toml
