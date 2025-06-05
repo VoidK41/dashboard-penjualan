@@ -2,7 +2,7 @@
 
 Dashboard ini membantu Anda **mengevaluasi performa penjualan** dengan mudah hanya dari file Excel atau CSV. Dirancang untuk pemilik usaha, analis penjualan, dan freelancer yang butuh alat visualisasi cepat dan intuitif.
 
-![Tampilan Dashboard](screenshot\Screenshot 2025-06-05 144359.png)
+![Tampilan Dashboard](screenshot_dashboard.png)
 
 ---
 
