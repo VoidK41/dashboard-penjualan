@@ -74,24 +74,36 @@ if uploaded is not None:
     col2.metric("Rata-rata per Order", f"{df['Sales'].mean():,.2f}")
     col3.metric("Jumlah Order", f"{len(df):,}")
 
+    # Penjualan Bulanan
     df_monthly = df.resample('M', on='Order Date').sum(numeric_only=True).reset_index()
 
     st.subheader("📆 Penjualan Bulanan")
     fig_line = px.line(df_monthly, x="Order Date", y="Sales", title="Total Penjualan Bulanan", markers=True)
     st.plotly_chart(fig_line, use_container_width=True)
 
+    # Tambahkan peringatan jika bulan berjalan belum final
+    if not df_monthly.empty:
+        last_month = df_monthly["Order Date"].max()
+        now = datetime.datetime.now()
+        if last_month.month == now.month and last_month.year == now.year:
+            st.caption("⚠️ Data bulan berjalan mungkin belum final. Perbarui data di akhir bulan.")
+
+    # Penjualan per Kategori
     if "Category" in df.columns:
         st.subheader("📦 Penjualan per Kategori")
         cat_group = df.groupby("Category")["Sales"].sum().sort_values(ascending=False).reset_index()
         fig_bar = px.bar(cat_group, x="Category", y="Sales", color="Category", text_auto=".2s")
         st.plotly_chart(fig_bar, use_container_width=True)
 
+    # Penjualan per Wilayah
     if "Region" in df.columns:
         st.subheader("🗺️ Distribusi Penjualan per Wilayah")
         region_group = df.groupby("Region")["Sales"].sum().reset_index()
         fig_pie = px.pie(region_group, names="Region", values="Sales", hole=0.4)
+        fig_pie.update_traces(textinfo='label+percent+value')
         st.plotly_chart(fig_pie, use_container_width=True)
 
+    # Unduh Excel
     st.subheader("📥 Unduh Data Terfilter")
     def convert_df_to_excel(df):
         output = BytesIO()
