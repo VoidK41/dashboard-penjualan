@@ -93,3 +93,10 @@ streamlit run app.py
 
 Silakan fork, gunakan, dan modifikasi!
 Lisensi: **MIT** – bebas digunakan untuk keperluan pribadi maupun komersial.
+
+
+## 👨‍💻 Author
+
+**Khairu Ikramendra**  
+Freelance dashboard developer & data analyst  
+[LinkedIn](https://www.linkedin.com/in/khairuikramendra/) | [Upwork](https://www.upwork.com/freelancers/~017002e8546494c6e9)
