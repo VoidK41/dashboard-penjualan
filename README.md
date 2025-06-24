@@ -79,11 +79,7 @@ streamlit run app.py
 
 ---
 
-## 🌐 Demo Online (Jika Sudah Dideploy)
 
-🔗 [Lihat Versi Online](https://sales-dashboard-2025.streamlit.app)
-
----
 
 ## 💼 Cocok Untuk
 
