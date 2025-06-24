@@ -93,5 +93,3 @@ streamlit run app.py
 
 Silakan fork, gunakan, dan modifikasi!
 Lisensi: **MIT** – bebas digunakan untuk keperluan pribadi maupun komersial.
-
-📩 Kontak: khairuikramendra11@gmail.com
