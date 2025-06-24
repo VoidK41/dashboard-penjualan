@@ -77,10 +77,6 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
----
-
-
-
 ## 💼 Cocok Untuk
 
 - UKM & toko yang ingin memonitor penjualan dengan mudah
@@ -94,6 +90,7 @@ streamlit run app.py
 Silakan fork, gunakan, dan modifikasi!
 Lisensi: **MIT** – bebas digunakan untuk keperluan pribadi maupun komersial.
 
+---
 
 ## 👨‍💻 Author
 
